@@ -3,6 +3,8 @@ const geocode=require('./geocode')
 const forecast=require('./forecast')
 const express=require('express')
 const app=express()
+const port=process.env.PORT||3000
+
 const hbs=require('hbs')
 const publicPath= path.join(__dirname,'../public')
 const viewPath=path.join(__dirname,'../templates/views')
@@ -106,6 +108,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log('server is up on port 3000')
+app.listen(port,()=>{
+    console.log('server is up on port '+port)
 })
