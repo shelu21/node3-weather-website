@@ -9,7 +9,7 @@ const forecast=(latitude,longitude,callback)=>{
             callback('Unable to find location. Try another ccordinates',undefined)
         }else{
             const data=body.current
-            callback(undefined,data.weather_descriptions[0]+'. It is currently '+data.temperature+' degrees out. It feels like '+data.feelslike+' dergrees out.')
+            callback(undefined,data.weather_descriptions[0]+'. It is currently '+data.temperature+' degrees out. It feels like '+data.feelslike+' dergrees out. Also the humdity is '+data.humidity+' there.')
         }
     })
 }
